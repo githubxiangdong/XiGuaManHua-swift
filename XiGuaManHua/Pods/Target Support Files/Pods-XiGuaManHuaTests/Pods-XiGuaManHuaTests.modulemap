@@ -1,0 +1,6 @@
+framework module Pods_XiGuaManHuaTests {
+  umbrella header "Pods-XiGuaManHuaTests-umbrella.h"
+
+  export *
+  module * { export * }
+}

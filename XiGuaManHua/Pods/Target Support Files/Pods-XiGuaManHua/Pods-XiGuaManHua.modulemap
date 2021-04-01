@@ -1,0 +1,6 @@
+framework module Pods_XiGuaManHua {
+  umbrella header "Pods-XiGuaManHua-umbrella.h"
+
+  export *
+  module * { export * }
+}
