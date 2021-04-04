@@ -10,28 +10,32 @@
 		057BA1C3A0AA46985DA44B7E /* Pods_XiGuaManHua_XiGuaManHuaUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5F2EC85E12751F5E2282E953 /* Pods_XiGuaManHua_XiGuaManHuaUITests.framework */; };
 		6B8F97883BA1C50EA88C79D9 /* Pods_XiGuaManHuaTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DDE3FB186C84872EE26EB8AC /* Pods_XiGuaManHuaTests.framework */; };
 		810A0976A2A4D6769D4B0634 /* Pods_XiGuaManHua.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73640D08535EC4B55F9E2FF4 /* Pods_XiGuaManHua.framework */; };
-		F71F33CD261572A600F0AD19 /* XGCollectionNormalCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F71F33CC261572A600F0AD19 /* XGCollectionNormalCell.swift */; };
-		F71FACFA2614B56E005C4E8B /* XGCollectionHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F71FACF92614B56E005C4E8B /* XGCollectionHeaderView.swift */; };
+		F71F343926180D1800F0AD19 /* XGHomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F71F342126180D1800F0AD19 /* XGHomeViewController.swift */; };
+		F71F343A26180D1800F0AD19 /* XGRankViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F71F342226180D1800F0AD19 /* XGRankViewController.swift */; };
+		F71F343B26180D1800F0AD19 /* XGVIPViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F71F342326180D1800F0AD19 /* XGVIPViewController.swift */; };
+		F71F343C26180D1800F0AD19 /* XGRecommendViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F71F342426180D1800F0AD19 /* XGRecommendViewController.swift */; };
+		F71F343D26180D1800F0AD19 /* XGSubscribeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F71F342526180D1800F0AD19 /* XGSubscribeViewController.swift */; };
+		F71F343E26180D1800F0AD19 /* XGCollectionNormalCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F71F342826180D1800F0AD19 /* XGCollectionNormalCell.swift */; };
+		F71F343F26180D1800F0AD19 /* XGCollectionHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F71F342926180D1800F0AD19 /* XGCollectionHeaderView.swift */; };
+		F71F344026180D1800F0AD19 /* XGRecommendRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = F71F342B26180D1800F0AD19 /* XGRecommendRequest.swift */; };
+		F71F344126180D1800F0AD19 /* XGCategoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F71F342E26180D1800F0AD19 /* XGCategoryViewController.swift */; };
+		F71F344226180D1800F0AD19 /* XGMineViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F71F343126180D1800F0AD19 /* XGMineViewController.swift */; };
+		F71F344326180D1800F0AD19 /* XGBookViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F71F343426180D1800F0AD19 /* XGBookViewController.swift */; };
+		F71F34582619554F00F0AD19 /* XGNetwork.swift in Sources */ = {isa = PBXBuildFile; fileRef = F71F34572619554F00F0AD19 /* XGNetwork.swift */; };
+		F71F346C2619E22900F0AD19 /* XGRecommendModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F71F346B2619E22900F0AD19 /* XGRecommendModel.swift */; };
+		F71F34762619E4BF00F0AD19 /* XGTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F71F34732619E4BF00F0AD19 /* XGTabBarController.swift */; };
+		F71F34772619E4BF00F0AD19 /* XGNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F71F34742619E4BF00F0AD19 /* XGNavigationController.swift */; };
+		F71F34782619E4BF00F0AD19 /* XGBaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F71F34752619E4BF00F0AD19 /* XGBaseViewController.swift */; };
+		F71F347D2619E4DA00F0AD19 /* XGCommonModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F71F347C2619E4DA00F0AD19 /* XGCommonModel.swift */; };
 		F73645392610873500B9FCCE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F73645382610873500B9FCCE /* AppDelegate.swift */; };
 		F73645422610873700B9FCCE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F73645412610873700B9FCCE /* Assets.xcassets */; };
 		F73645452610873700B9FCCE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F73645432610873700B9FCCE /* LaunchScreen.storyboard */; };
 		F73645502610873700B9FCCE /* XiGuaManHuaTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F736454F2610873700B9FCCE /* XiGuaManHuaTests.swift */; };
 		F736455B2610873700B9FCCE /* XiGuaManHuaUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F736455A2610873700B9FCCE /* XiGuaManHuaUITests.swift */; };
-		F736457C2610C7F100B9FCCE /* XGTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F736457B2610C7F100B9FCCE /* XGTabBarController.swift */; };
-		F73645992610CFF400B9FCCE /* XGHomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F73645982610CFF400B9FCCE /* XGHomeViewController.swift */; };
-		F736459F2610CFFB00B9FCCE /* XGCategoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F736459E2610CFFB00B9FCCE /* XGCategoryViewController.swift */; };
-		F73645A52610D00500B9FCCE /* XGBookViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F73645A42610D00500B9FCCE /* XGBookViewController.swift */; };
-		F73645AB2610D00C00B9FCCE /* XGMineViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F73645AA2610D00C00B9FCCE /* XGMineViewController.swift */; };
-		F73645B02610E03600B9FCCE /* XGNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F73645AF2610E03600B9FCCE /* XGNavigationController.swift */; };
 		F73645B62610E28700B9FCCE /* UIColor-Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = F73645B52610E28600B9FCCE /* UIColor-Extension.swift */; };
-		F73645BE2610E59E00B9FCCE /* XGBaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F73645BD2610E59E00B9FCCE /* XGBaseViewController.swift */; };
 		F73645CE2611BB8300B9FCCE /* XGSegmentedTitleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F73645CD2611BB8300B9FCCE /* XGSegmentedTitleView.swift */; };
 		F73645D42611BBCF00B9FCCE /* XGCommon.swift in Sources */ = {isa = PBXBuildFile; fileRef = F73645D32611BBCF00B9FCCE /* XGCommon.swift */; };
 		F73645DC2611DA8500B9FCCE /* XGSegmentedPageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F73645DB2611DA8500B9FCCE /* XGSegmentedPageView.swift */; };
-		F73645E426133F2900B9FCCE /* XGRecommendViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F73645E326133F2900B9FCCE /* XGRecommendViewController.swift */; };
-		F73645E926133F3B00B9FCCE /* XGVIPViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F73645E826133F3B00B9FCCE /* XGVIPViewController.swift */; };
-		F73645EE26133F6100B9FCCE /* XGSubscribeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F73645ED26133F6100B9FCCE /* XGSubscribeViewController.swift */; };
-		F73645F326133F8B00B9FCCE /* XGRankViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F73645F226133F8B00B9FCCE /* XGRankViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -61,8 +65,23 @@
 		86E3DEC980BDD9C7B1B35B36 /* Pods-XiGuaManHuaTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-XiGuaManHuaTests.release.xcconfig"; path = "Target Support Files/Pods-XiGuaManHuaTests/Pods-XiGuaManHuaTests.release.xcconfig"; sourceTree = "<group>"; };
 		BFEEB3110AE793C0ADFA3942 /* Pods-XiGuaManHua-XiGuaManHuaUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-XiGuaManHua-XiGuaManHuaUITests.debug.xcconfig"; path = "Target Support Files/Pods-XiGuaManHua-XiGuaManHuaUITests/Pods-XiGuaManHua-XiGuaManHuaUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		DDE3FB186C84872EE26EB8AC /* Pods_XiGuaManHuaTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_XiGuaManHuaTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		F71F33CC261572A600F0AD19 /* XGCollectionNormalCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XGCollectionNormalCell.swift; sourceTree = "<group>"; };
-		F71FACF92614B56E005C4E8B /* XGCollectionHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XGCollectionHeaderView.swift; sourceTree = "<group>"; };
+		F71F342126180D1800F0AD19 /* XGHomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = XGHomeViewController.swift; sourceTree = "<group>"; };
+		F71F342226180D1800F0AD19 /* XGRankViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = XGRankViewController.swift; sourceTree = "<group>"; };
+		F71F342326180D1800F0AD19 /* XGVIPViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = XGVIPViewController.swift; sourceTree = "<group>"; };
+		F71F342426180D1800F0AD19 /* XGRecommendViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = XGRecommendViewController.swift; sourceTree = "<group>"; };
+		F71F342526180D1800F0AD19 /* XGSubscribeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = XGSubscribeViewController.swift; sourceTree = "<group>"; };
+		F71F342826180D1800F0AD19 /* XGCollectionNormalCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = XGCollectionNormalCell.swift; sourceTree = "<group>"; };
+		F71F342926180D1800F0AD19 /* XGCollectionHeaderView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = XGCollectionHeaderView.swift; sourceTree = "<group>"; };
+		F71F342B26180D1800F0AD19 /* XGRecommendRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = XGRecommendRequest.swift; sourceTree = "<group>"; };
+		F71F342E26180D1800F0AD19 /* XGCategoryViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = XGCategoryViewController.swift; sourceTree = "<group>"; };
+		F71F343126180D1800F0AD19 /* XGMineViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = XGMineViewController.swift; sourceTree = "<group>"; };
+		F71F343426180D1800F0AD19 /* XGBookViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = XGBookViewController.swift; sourceTree = "<group>"; };
+		F71F34572619554F00F0AD19 /* XGNetwork.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XGNetwork.swift; sourceTree = "<group>"; };
+		F71F346B2619E22900F0AD19 /* XGRecommendModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XGRecommendModel.swift; sourceTree = "<group>"; };
+		F71F34732619E4BF00F0AD19 /* XGTabBarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = XGTabBarController.swift; sourceTree = "<group>"; };
+		F71F34742619E4BF00F0AD19 /* XGNavigationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = XGNavigationController.swift; sourceTree = "<group>"; };
+		F71F34752619E4BF00F0AD19 /* XGBaseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = XGBaseViewController.swift; sourceTree = "<group>"; };
+		F71F347C2619E4DA00F0AD19 /* XGCommonModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XGCommonModel.swift; sourceTree = "<group>"; };
 		F73645352610873500B9FCCE /* XiGuaManHua.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = XiGuaManHua.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F73645382610873500B9FCCE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F73645412610873700B9FCCE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -74,21 +93,10 @@
 		F73645562610873700B9FCCE /* XiGuaManHuaUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = XiGuaManHuaUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		F736455A2610873700B9FCCE /* XiGuaManHuaUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XiGuaManHuaUITests.swift; sourceTree = "<group>"; };
 		F736455C2610873700B9FCCE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		F736457B2610C7F100B9FCCE /* XGTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XGTabBarController.swift; sourceTree = "<group>"; };
-		F73645982610CFF400B9FCCE /* XGHomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = XGHomeViewController.swift; sourceTree = "<group>"; };
-		F736459E2610CFFB00B9FCCE /* XGCategoryViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = XGCategoryViewController.swift; sourceTree = "<group>"; };
-		F73645A42610D00500B9FCCE /* XGBookViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = XGBookViewController.swift; sourceTree = "<group>"; };
-		F73645AA2610D00C00B9FCCE /* XGMineViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = XGMineViewController.swift; sourceTree = "<group>"; };
-		F73645AF2610E03600B9FCCE /* XGNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XGNavigationController.swift; sourceTree = "<group>"; };
 		F73645B52610E28600B9FCCE /* UIColor-Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor-Extension.swift"; sourceTree = "<group>"; };
-		F73645BD2610E59E00B9FCCE /* XGBaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XGBaseViewController.swift; sourceTree = "<group>"; };
 		F73645CD2611BB8300B9FCCE /* XGSegmentedTitleView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = XGSegmentedTitleView.swift; sourceTree = "<group>"; };
 		F73645D32611BBCF00B9FCCE /* XGCommon.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XGCommon.swift; sourceTree = "<group>"; };
 		F73645DB2611DA8500B9FCCE /* XGSegmentedPageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XGSegmentedPageView.swift; sourceTree = "<group>"; };
-		F73645E326133F2900B9FCCE /* XGRecommendViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XGRecommendViewController.swift; sourceTree = "<group>"; };
-		F73645E826133F3B00B9FCCE /* XGVIPViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XGVIPViewController.swift; sourceTree = "<group>"; };
-		F73645ED26133F6100B9FCCE /* XGSubscribeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XGSubscribeViewController.swift; sourceTree = "<group>"; };
-		F73645F226133F8B00B9FCCE /* XGRankViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XGRankViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -142,20 +150,155 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		F71FACF72614B4EC005C4E8B /* Model */ = {
+		F71F341E26180D1800F0AD19 /* UI */ = {
 			isa = PBXGroup;
 			children = (
+				F71F343526180D1800F0AD19 /* Mian */,
+				F71F341F26180D1800F0AD19 /* Home */,
+				F71F342C26180D1800F0AD19 /* Category */,
+				F71F343226180D1800F0AD19 /* Book */,
+				F71F342F26180D1800F0AD19 /* Mine */,
+			);
+			path = UI;
+			sourceTree = "<group>";
+		};
+		F71F341F26180D1800F0AD19 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				F71F342026180D1800F0AD19 /* Controller */,
+				F71F342626180D1800F0AD19 /* Model */,
+				F71F342726180D1800F0AD19 /* View */,
+				F71F342A26180D1800F0AD19 /* Request */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		F71F342026180D1800F0AD19 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				F71F342126180D1800F0AD19 /* XGHomeViewController.swift */,
+				F71F342426180D1800F0AD19 /* XGRecommendViewController.swift */,
+				F71F342326180D1800F0AD19 /* XGVIPViewController.swift */,
+				F71F342526180D1800F0AD19 /* XGSubscribeViewController.swift */,
+				F71F342226180D1800F0AD19 /* XGRankViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		F71F342626180D1800F0AD19 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				F71F346B2619E22900F0AD19 /* XGRecommendModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
 		};
-		F71FACF82614B4EC005C4E8B /* View */ = {
+		F71F342726180D1800F0AD19 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				F71FACF92614B56E005C4E8B /* XGCollectionHeaderView.swift */,
-				F71F33CC261572A600F0AD19 /* XGCollectionNormalCell.swift */,
+				F71F342826180D1800F0AD19 /* XGCollectionNormalCell.swift */,
+				F71F342926180D1800F0AD19 /* XGCollectionHeaderView.swift */,
 			);
 			path = View;
+			sourceTree = "<group>";
+		};
+		F71F342A26180D1800F0AD19 /* Request */ = {
+			isa = PBXGroup;
+			children = (
+				F71F342B26180D1800F0AD19 /* XGRecommendRequest.swift */,
+			);
+			path = Request;
+			sourceTree = "<group>";
+		};
+		F71F342C26180D1800F0AD19 /* Category */ = {
+			isa = PBXGroup;
+			children = (
+				F71F342D26180D1800F0AD19 /* Controller */,
+			);
+			path = Category;
+			sourceTree = "<group>";
+		};
+		F71F342D26180D1800F0AD19 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				F71F342E26180D1800F0AD19 /* XGCategoryViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		F71F342F26180D1800F0AD19 /* Mine */ = {
+			isa = PBXGroup;
+			children = (
+				F71F343026180D1800F0AD19 /* Controller */,
+			);
+			path = Mine;
+			sourceTree = "<group>";
+		};
+		F71F343026180D1800F0AD19 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				F71F343126180D1800F0AD19 /* XGMineViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		F71F343226180D1800F0AD19 /* Book */ = {
+			isa = PBXGroup;
+			children = (
+				F71F343326180D1800F0AD19 /* Controller */,
+			);
+			path = Book;
+			sourceTree = "<group>";
+		};
+		F71F343326180D1800F0AD19 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				F71F343426180D1800F0AD19 /* XGBookViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		F71F343526180D1800F0AD19 /* Mian */ = {
+			isa = PBXGroup;
+			children = (
+				F71F34702619E4BE00F0AD19 /* Model */,
+				F71F34712619E4BE00F0AD19 /* View */,
+				F71F34722619E4BF00F0AD19 /* Controller */,
+			);
+			path = Mian;
+			sourceTree = "<group>";
+		};
+		F71F344D26180E2400F0AD19 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				F71F34572619554F00F0AD19 /* XGNetwork.swift */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
+		F71F34702619E4BE00F0AD19 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				F71F347C2619E4DA00F0AD19 /* XGCommonModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		F71F34712619E4BE00F0AD19 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		F71F34722619E4BF00F0AD19 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				F71F34732619E4BF00F0AD19 /* XGTabBarController.swift */,
+				F71F34742619E4BF00F0AD19 /* XGNavigationController.swift */,
+				F71F34752619E4BF00F0AD19 /* XGBaseViewController.swift */,
+			);
+			path = Controller;
 			sourceTree = "<group>";
 		};
 		F736452C2610873500B9FCCE = {
@@ -213,104 +356,21 @@
 		F73645712610C52E00B9FCCE /* Classes */ = {
 			isa = PBXGroup;
 			children = (
-				F73645772610C52E00B9FCCE /* Mian */,
-				F73645722610C52E00B9FCCE /* Home */,
-				F73645742610C52E00B9FCCE /* Category */,
-				F73645762610C52E00B9FCCE /* Book */,
-				F73645752610C52E00B9FCCE /* Mine */,
+				F71F341E26180D1800F0AD19 /* UI */,
 				F73645732610C52E00B9FCCE /* Tools */,
 				F73645CB2611BB8300B9FCCE /* Widgets */,
 			);
 			path = Classes;
 			sourceTree = "<group>";
 		};
-		F73645722610C52E00B9FCCE /* Home */ = {
-			isa = PBXGroup;
-			children = (
-				F71FACF72614B4EC005C4E8B /* Model */,
-				F71FACF82614B4EC005C4E8B /* View */,
-				F73645972610CFF400B9FCCE /* Controller */,
-			);
-			path = Home;
-			sourceTree = "<group>";
-		};
 		F73645732610C52E00B9FCCE /* Tools */ = {
 			isa = PBXGroup;
 			children = (
+				F71F344D26180E2400F0AD19 /* Network */,
 				F73645D22611BBC200B9FCCE /* Common */,
 				F73645B42610E22B00B9FCCE /* Extension */,
 			);
 			path = Tools;
-			sourceTree = "<group>";
-		};
-		F73645742610C52E00B9FCCE /* Category */ = {
-			isa = PBXGroup;
-			children = (
-				F736459D2610CFFB00B9FCCE /* Controller */,
-			);
-			path = Category;
-			sourceTree = "<group>";
-		};
-		F73645752610C52E00B9FCCE /* Mine */ = {
-			isa = PBXGroup;
-			children = (
-				F73645A92610D00C00B9FCCE /* Controller */,
-			);
-			path = Mine;
-			sourceTree = "<group>";
-		};
-		F73645762610C52E00B9FCCE /* Book */ = {
-			isa = PBXGroup;
-			children = (
-				F73645A32610D00500B9FCCE /* Controller */,
-			);
-			path = Book;
-			sourceTree = "<group>";
-		};
-		F73645772610C52E00B9FCCE /* Mian */ = {
-			isa = PBXGroup;
-			children = (
-				F736457B2610C7F100B9FCCE /* XGTabBarController.swift */,
-				F73645AF2610E03600B9FCCE /* XGNavigationController.swift */,
-				F73645BD2610E59E00B9FCCE /* XGBaseViewController.swift */,
-			);
-			path = Mian;
-			sourceTree = "<group>";
-		};
-		F73645972610CFF400B9FCCE /* Controller */ = {
-			isa = PBXGroup;
-			children = (
-				F73645982610CFF400B9FCCE /* XGHomeViewController.swift */,
-				F73645E326133F2900B9FCCE /* XGRecommendViewController.swift */,
-				F73645E826133F3B00B9FCCE /* XGVIPViewController.swift */,
-				F73645ED26133F6100B9FCCE /* XGSubscribeViewController.swift */,
-				F73645F226133F8B00B9FCCE /* XGRankViewController.swift */,
-			);
-			path = Controller;
-			sourceTree = "<group>";
-		};
-		F736459D2610CFFB00B9FCCE /* Controller */ = {
-			isa = PBXGroup;
-			children = (
-				F736459E2610CFFB00B9FCCE /* XGCategoryViewController.swift */,
-			);
-			path = Controller;
-			sourceTree = "<group>";
-		};
-		F73645A32610D00500B9FCCE /* Controller */ = {
-			isa = PBXGroup;
-			children = (
-				F73645A42610D00500B9FCCE /* XGBookViewController.swift */,
-			);
-			path = Controller;
-			sourceTree = "<group>";
-		};
-		F73645A92610D00C00B9FCCE /* Controller */ = {
-			isa = PBXGroup;
-			children = (
-				F73645AA2610D00C00B9FCCE /* XGMineViewController.swift */,
-			);
-			path = Controller;
 			sourceTree = "<group>";
 		};
 		F73645B42610E22B00B9FCCE /* Extension */ = {
@@ -584,24 +644,28 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F71F343D26180D1800F0AD19 /* XGSubscribeViewController.swift in Sources */,
 				F73645CE2611BB8300B9FCCE /* XGSegmentedTitleView.swift in Sources */,
-				F73645AB2610D00C00B9FCCE /* XGMineViewController.swift in Sources */,
-				F73645992610CFF400B9FCCE /* XGHomeViewController.swift in Sources */,
-				F73645B02610E03600B9FCCE /* XGNavigationController.swift in Sources */,
-				F736457C2610C7F100B9FCCE /* XGTabBarController.swift in Sources */,
+				F71F34782619E4BF00F0AD19 /* XGBaseViewController.swift in Sources */,
+				F71F343F26180D1800F0AD19 /* XGCollectionHeaderView.swift in Sources */,
+				F71F344226180D1800F0AD19 /* XGMineViewController.swift in Sources */,
+				F71F343B26180D1800F0AD19 /* XGVIPViewController.swift in Sources */,
+				F71F343C26180D1800F0AD19 /* XGRecommendViewController.swift in Sources */,
 				F73645D42611BBCF00B9FCCE /* XGCommon.swift in Sources */,
-				F73645E926133F3B00B9FCCE /* XGVIPViewController.swift in Sources */,
-				F73645A52610D00500B9FCCE /* XGBookViewController.swift in Sources */,
-				F71FACFA2614B56E005C4E8B /* XGCollectionHeaderView.swift in Sources */,
-				F73645F326133F8B00B9FCCE /* XGRankViewController.swift in Sources */,
+				F71F343926180D1800F0AD19 /* XGHomeViewController.swift in Sources */,
 				F73645392610873500B9FCCE /* AppDelegate.swift in Sources */,
-				F73645E426133F2900B9FCCE /* XGRecommendViewController.swift in Sources */,
-				F73645EE26133F6100B9FCCE /* XGSubscribeViewController.swift in Sources */,
-				F71F33CD261572A600F0AD19 /* XGCollectionNormalCell.swift in Sources */,
 				F73645DC2611DA8500B9FCCE /* XGSegmentedPageView.swift in Sources */,
-				F736459F2610CFFB00B9FCCE /* XGCategoryViewController.swift in Sources */,
-				F73645BE2610E59E00B9FCCE /* XGBaseViewController.swift in Sources */,
+				F71F347D2619E4DA00F0AD19 /* XGCommonModel.swift in Sources */,
+				F71F34772619E4BF00F0AD19 /* XGNavigationController.swift in Sources */,
+				F71F34762619E4BF00F0AD19 /* XGTabBarController.swift in Sources */,
+				F71F343A26180D1800F0AD19 /* XGRankViewController.swift in Sources */,
 				F73645B62610E28700B9FCCE /* UIColor-Extension.swift in Sources */,
+				F71F34582619554F00F0AD19 /* XGNetwork.swift in Sources */,
+				F71F343E26180D1800F0AD19 /* XGCollectionNormalCell.swift in Sources */,
+				F71F344026180D1800F0AD19 /* XGRecommendRequest.swift in Sources */,
+				F71F346C2619E22900F0AD19 /* XGRecommendModel.swift in Sources */,
+				F71F344326180D1800F0AD19 /* XGBookViewController.swift in Sources */,
+				F71F344126180D1800F0AD19 /* XGCategoryViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

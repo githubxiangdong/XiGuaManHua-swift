@@ -8,6 +8,17 @@
 import UIKit
 
 class XGCollectionHeaderView: UICollectionReusableView {
+    // MARK:- 对外暴露的属性
+    public var comicListModel: XGComicListsModel? {
+        didSet {
+            if let iconStr = comicListModel?.newTitleIconUrl {
+                iconView.kf.setImage(with: URL(string: iconStr), placeholder: UIImage(named: "normal_placeholder_v"))
+            }
+            
+            titleLabel.text = comicListModel?.itemTitle
+        }
+    }
+    
     // MARK:- 懒加载属性
     private lazy var iconView: UIImageView = {
         let iconView = UIImageView()
@@ -58,13 +69,13 @@ extension XGCollectionHeaderView {
     
     private func setupLayout() {
         iconView.snp.makeConstraints { (make) in
-            make.left.equalTo(10)
+            make.left.equalTo(8)
             make.centerY.equalToSuperview()
             make.width.height.equalTo(36)
         }
         
         titleLabel.snp.makeConstraints { (make) in
-            make.left.equalTo(iconView.snp_right).offset(8)
+            make.left.equalTo(iconView.snp_right).offset(5)
             make.centerY.height.equalTo(iconView)
             make.width.equalTo(200)
         }

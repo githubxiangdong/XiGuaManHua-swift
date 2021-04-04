@@ -10,7 +10,7 @@ import UIKit
 // MARK:- 定义常量
 private let kItemMargin: CGFloat = 5
 private let kItemW = (kScreenWidth - 3 * kItemMargin) / 2
-private let kItemH = kItemW // kItemW * 3 / 4
+private let kItemH = (kItemW * 3 / 4) + 35
 private let kHeaderViewH: CGFloat = 44
 private let kFooterViewH: CGFloat = 10
 
@@ -20,6 +20,8 @@ private let kFooterViewId = "kFooterViewId"
 
 class XGRecommendViewController: UIViewController {
     // MARK:- 懒加载属性
+    private lazy var comicList = [XGComicListsModel]()
+    
     private lazy var collectionView: UICollectionView = {[unowned self] in
         /*
          [weak self] weak：弱引用
@@ -35,14 +37,13 @@ class XGRecommendViewController: UIViewController {
         layout.itemSize = CGSize(width: kItemW, height: kItemH)
         layout.minimumLineSpacing = 0
         layout.minimumInteritemSpacing = kItemMargin
-        layout.headerReferenceSize = CGSize(width: kScreenWidth, height: kHeaderViewH)
-        layout.footerReferenceSize = CGSize(width: kScreenWidth, height: kFooterViewH)
         layout.sectionInset = UIEdgeInsets(top: 0, left: kItemMargin, bottom: 0, right: kItemMargin) // 设置组的内边距
         
         // 2. 创建UICollectionView
         let collectionView = UICollectionView(frame: self.view.bounds, collectionViewLayout: layout)
         collectionView.backgroundColor = UIColor.white
         collectionView.dataSource = self
+        collectionView.delegate = self
         collectionView.autoresizingMask = [.flexibleHeight, .flexibleWidth]
         collectionView.register(XGCollectionNormalCell.self, forCellWithReuseIdentifier: kNormalCellId)
         collectionView.register(XGCollectionHeaderView.self, forSupplementaryViewOfKind: UICollectionView.elementKindSectionHeader, withReuseIdentifier: kHeaderViewId)
@@ -57,6 +58,9 @@ class XGRecommendViewController: UIViewController {
         
         // 1. 设置UI界面
         setupUI()
+        
+        // 2. 请求数据
+        loadData()
     }
 }
 
@@ -70,34 +74,57 @@ extension XGRecommendViewController {
 }
 
 
+// MARK:- 请求数据
+extension XGRecommendViewController {
+    private func loadData() {
+        XGRecommendRequest.requestRecommendData{ (comicList) in
+            self.comicList = comicList
+            self.collectionView.reloadData()
+        }
+    }
+}
+
+
 // MARK:- 遵循 UICollectionViewDataSource
 extension XGRecommendViewController: UICollectionViewDataSource {
     func numberOfSections(in collectionView: UICollectionView) -> Int {
-        return 12
+        return comicList.count
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 6
+        return comicList[section].comicArray.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        // 1. 获取cell
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: kNormalCellId, for: indexPath)
-        
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: kNormalCellId, for: indexPath) as! XGCollectionNormalCell
+        let comicsModel = comicList[indexPath.section]
+        cell.comicModel = comicsModel.comicArray[indexPath.item]
         return cell
     }
     
     func collectionView(_ collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, at indexPath: IndexPath) -> UICollectionReusableView {
-        // 1. 取出section的headerView
         if kind == UICollectionView.elementKindSectionHeader {
-            let headerView = collectionView.dequeueReusableSupplementaryView(ofKind: kind, withReuseIdentifier: kHeaderViewId, for: indexPath)
-            
+            let headerView = collectionView.dequeueReusableSupplementaryView(ofKind: kind, withReuseIdentifier: kHeaderViewId, for: indexPath) as! XGCollectionHeaderView
+            headerView.comicListModel = comicList[indexPath.section]
             return headerView
         } else {
-            // 最后一组的footer需要隐藏
             let footerView = collectionView.dequeueReusableSupplementaryView(ofKind: kind, withReuseIdentifier: kFooterViewId, for: indexPath)
             footerView.backgroundColor = UIColor.background
             return footerView
         }
+    }
+}
+
+
+// MARK:- 遵循 UICollectionViewDelegateFlowLayout
+extension XGRecommendViewController: UICollectionViewDelegateFlowLayout {
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, referenceSizeForHeaderInSection section: Int) -> CGSize {
+        let comicListModel = comicList[section]
+        // TO DO ??
+        return comicListModel.itemTitle?.count ?? 0 > 0 ? CGSize(width: kScreenWidth, height: kHeaderViewH) : CGSize.zero
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, referenceSizeForFooterInSection section: Int) -> CGSize {
+        return section != comicList.count - 1 ? CGSize(width: kScreenWidth, height: kFooterViewH) : CGSize.zero
     }
 }

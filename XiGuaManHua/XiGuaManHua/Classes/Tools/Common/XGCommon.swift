@@ -7,6 +7,10 @@
 
 import UIKit
 import SnapKit
+import Kingfisher
+
+// 数据请求接口
+let kBaseUrl = "http://app.u17.com/v3/appV3_3/ios/phone"
 
 // 是否是iphonex
 let kIsIphoneX = UI_USER_INTERFACE_IDIOM() == .phone
@@ -19,7 +23,6 @@ let kStatusBarHeight: CGFloat = kIsIphoneX ? 44.0 : 20
 let kNavigationBarHeight: CGFloat = 44
 // tabBar的高度
 let kTabBarHeight: CGFloat = kIsIphoneX ? (49.0 + 34.0) : 49.0
-
 
 // 屏幕宽高
 let kScreenWidth = UIScreen.main.bounds.width

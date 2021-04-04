@@ -8,10 +8,28 @@
 import UIKit
 
 class XGCollectionNormalCell: UICollectionViewCell {
+    // MARK:- 对外暴露的属性
+    public var comicModel: XGComicsModel? {
+        didSet {
+            if let imageStr = comicModel?.cover {
+                imageView.kf.setImage(with: URL(string: imageStr), placeholder: UIImage(named: "normal_placeholder_h"))
+            }
+            
+            if let titleStr = comicModel?.name {
+                titleLabel.text = titleStr
+            }
+            
+            if let descStr = comicModel?.subTitle {
+                descLabel.text = descStr
+            }
+        }
+    }
+    
     // MARK:- 懒加载属性
     private lazy var imageView: UIImageView = {
         let imageView = UIImageView(image: UIImage(named: "normal_placeholder_h"))
-        
+        imageView.contentMode = .scaleAspectFill
+        imageView.clipsToBounds = true
         return imageView
     }()
     
@@ -72,7 +90,8 @@ extension XGCollectionNormalCell {
         
         imageView.snp.makeConstraints { (make) in
             make.top.left.right.equalTo(0)
-            make.bottom.equalTo(titleLabel.snp_top).offset(-5)
+            make.bottom.equalTo(titleLabel.snp_top).offset(-3)
         }
     }
 }
+
