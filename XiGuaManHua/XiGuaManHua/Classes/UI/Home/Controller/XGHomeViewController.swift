@@ -38,7 +38,7 @@ class XGHomeViewController: XGBaseViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
     }
-
+    
     override func setupUI() {
         // 1. 添加titleView
         navigationItem.titleView = self.segmendtedTitleView

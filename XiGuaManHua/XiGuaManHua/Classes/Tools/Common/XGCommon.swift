@@ -23,6 +23,8 @@ let kStatusBarHeight: CGFloat = kIsIphoneX ? 44.0 : 20
 let kNavigationBarHeight: CGFloat = 44
 // tabBar的高度
 let kTabBarHeight: CGFloat = kIsIphoneX ? (49.0 + 34.0) : 49.0
+// 状态栏和导航栏高度
+let kStatusAndNavigationBarH = kStatusBarHeight + kNavigationBarHeight
 
 // 屏幕宽高
 let kScreenWidth = UIScreen.main.bounds.width

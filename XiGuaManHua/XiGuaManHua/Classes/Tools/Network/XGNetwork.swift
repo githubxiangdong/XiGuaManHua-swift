@@ -20,7 +20,7 @@ class XGNetwork {
                        finish: @escaping (_ response: Any) -> ()) {
         // 1. 获取网络请求类型
         let type = method == .get ?  HTTPMethod.get : HTTPMethod.post
-
+        
         // 2. 发送网络请求
         Alamofire.request(url, method: type, parameters: parameters).responseJSON { ( response ) in
             

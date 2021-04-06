@@ -20,12 +20,15 @@ private let kSelectedColor: (CGFloat, CGFloat, CGFloat, CGFloat) = (255, 255, 25
 
 class XGSegmentedTitleView: UIView {
     // MARK:- 对外属性
-    public var isShowBottomLine: Bool // 默认是NO 不展示
     public weak var delegate: XGSegmentedTitleViewDelegate?
     
     // MARK:- 自定义属性
-    private var titles : [String]
+    private var titles: [String]
     private var currentIndex: Int = 0 // 当前的下标值
+    private var normalColor: (CGFloat, CGFloat, CGFloat, CGFloat)
+    private var selectedColor: (CGFloat, CGFloat, CGFloat, CGFloat)
+    private var fontSize: CGFloat = 0
+    private var isShowBottomLine: Bool = false // 默认是NO 不展示
     
     // MARK:- 懒加载属性
     private lazy var titleLabels: [UILabel] = [UILabel]()
@@ -39,14 +42,22 @@ class XGSegmentedTitleView: UIView {
     
     private lazy var scrollLine: UIView = {
         let scrollLine = UIView()
-        scrollLine.backgroundColor = UIColor(r: kSelectedColor.0, g: kSelectedColor.1, b: kSelectedColor.2)
+        scrollLine.backgroundColor = UIColor(r: selectedColor.0, g: selectedColor.1, b: selectedColor.2)
         return scrollLine
     }()
     
     // MARK:- 自定义构造函数
-    init(frame: CGRect, titles: [String]) {
+    init(frame: CGRect,
+         titles: [String],
+         normalColor: (CGFloat, CGFloat, CGFloat, CGFloat) = kNormalColor,
+         selectedColor: (CGFloat, CGFloat, CGFloat, CGFloat) = kSelectedColor,
+         size: CGFloat = 20,
+         isShowBottomLine: Bool = false) {
         self.titles = titles
-        isShowBottomLine = false
+        self.isShowBottomLine = isShowBottomLine
+        self.normalColor = normalColor
+        self.selectedColor = selectedColor
+        self.fontSize = size
         
         super.init(frame: frame)
         
@@ -88,11 +99,11 @@ extension XGSegmentedTitleView {
             // 2. 设置label的属性
             label.text = title
             label.tag = index
-            label.font = UIFont.boldSystemFont(ofSize: 20)
-            label.textColor = UIColor(r: kNormalColor.0,
-                                      g: kNormalColor.1,
-                                      b: kNormalColor.2,
-                                      a: kNormalColor.3)
+            label.font = UIFont.systemFont(ofSize: fontSize)
+            label.textColor = UIColor(r: normalColor.0,
+                                      g: normalColor.1,
+                                      b: normalColor.2,
+                                      a: normalColor.3)
             label.textAlignment = .center
             
             // 3. 设置label frame
@@ -116,7 +127,10 @@ extension XGSegmentedTitleView {
         // 1. 添加底线
         if isShowBottomLine {
             let bottomLine = UIView()
-            bottomLine.backgroundColor = UIColor.lightGray
+            bottomLine.backgroundColor = UIColor(r: normalColor.0,
+                                                 g: normalColor.1,
+                                                 b: normalColor.2,
+                                                 a: normalColor.3)
             let lineH: CGFloat = 0.5
             bottomLine.frame = CGRect(x: 0, y: bounds.height - lineH, width: bounds.width, height: lineH)
             addSubview(bottomLine)
@@ -125,10 +139,10 @@ extension XGSegmentedTitleView {
         // 2. 添加scrollLine
         // 2.1 获取第一个label
         guard let firstLabel = titleLabels.first else { return }
-        firstLabel.textColor = UIColor(r: kSelectedColor.0,
-                                       g: kSelectedColor.1,
-                                       b: kSelectedColor.2,
-                                       a: kSelectedColor.3)
+        firstLabel.textColor = UIColor(r: selectedColor.0,
+                                       g: selectedColor.1,
+                                       b: selectedColor.2,
+                                       a: selectedColor.3)
         
         // 2.2 设置scrollView的属性
         scrollView.addSubview(scrollLine)
@@ -150,14 +164,14 @@ extension XGSegmentedTitleView {
         let oldLabel = titleLabels[currentIndex]
         
         // 3. 切换文字的颜色
-        currentLabel.textColor = UIColor(r: kSelectedColor.0,
-                                         g: kSelectedColor.1,
-                                         b: kSelectedColor.2,
-                                         a: kSelectedColor.3)
-        oldLabel.textColor = UIColor(r: kNormalColor.0,
-                                     g: kNormalColor.1,
-                                     b: kNormalColor.2,
-                                     a: kNormalColor.3)
+        currentLabel.textColor = UIColor(r: selectedColor.0,
+                                         g: selectedColor.1,
+                                         b: selectedColor.2,
+                                         a: selectedColor.3)
+        oldLabel.textColor = UIColor(r: normalColor.0,
+                                     g: normalColor.1,
+                                     b: normalColor.2,
+                                     a: normalColor.3)
         
         // 4. 保存最新label的下标值
         currentIndex = currentLabel.tag
@@ -188,22 +202,22 @@ extension XGSegmentedTitleView {
         
         // 3. 颜色的渐变
         // 3.1 取出变化的范围
-        let colorDelta = (kSelectedColor.0 - kNormalColor.0,
-                          kSelectedColor.1 - kNormalColor.1,
-                          kSelectedColor.2 - kNormalColor.2,
-                          kSelectedColor.3 - kNormalColor.3)
+        let colorDelta = (selectedColor.0 - normalColor.0,
+                          selectedColor.1 - normalColor.1,
+                          selectedColor.2 - normalColor.2,
+                          selectedColor.3 - normalColor.3)
         
         // 3.2 变化sourceLabel
-        sourceLabel.textColor = UIColor(r: kSelectedColor.0 - colorDelta.0 * progress,
-                                        g: kSelectedColor.1 - colorDelta.1 * progress,
-                                        b: kSelectedColor.2 - colorDelta.2 * progress,
-                                        a: kSelectedColor.3 - colorDelta.3 * progress)
+        sourceLabel.textColor = UIColor(r: selectedColor.0 - colorDelta.0 * progress,
+                                        g: selectedColor.1 - colorDelta.1 * progress,
+                                        b: selectedColor.2 - colorDelta.2 * progress,
+                                        a: selectedColor.3 - colorDelta.3 * progress)
         
         // 3.3 变化targetLabel
-        targetLabel.textColor = UIColor(r: kNormalColor.0 + colorDelta.0 * progress,
-                                        g: kNormalColor.1 + colorDelta.1 * progress,
-                                        b: kNormalColor.2 + colorDelta.2 * progress,
-                                        a: kNormalColor.3 + colorDelta.3 * progress)
+        targetLabel.textColor = UIColor(r: normalColor.0 + colorDelta.0 * progress,
+                                        g: normalColor.1 + colorDelta.1 * progress,
+                                        b: normalColor.2 + colorDelta.2 * progress,
+                                        a: normalColor.3 + colorDelta.3 * progress)
         
         // 4. 记录最新的index
         currentIndex = targetIndex

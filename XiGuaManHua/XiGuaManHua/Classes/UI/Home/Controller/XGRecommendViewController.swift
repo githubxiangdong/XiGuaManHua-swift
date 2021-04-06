@@ -113,6 +113,11 @@ extension XGRecommendViewController: UICollectionViewDataSource {
             return footerView
         }
     }
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        let comicController = XGComicViewController()
+        navigationController?.pushViewController(comicController, animated: true)
+    }
 }
 
 
@@ -120,7 +125,7 @@ extension XGRecommendViewController: UICollectionViewDataSource {
 extension XGRecommendViewController: UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, referenceSizeForHeaderInSection section: Int) -> CGSize {
         let comicListModel = comicList[section]
-        // TO DO ??
+        //  ?? 空和并运算符
         return comicListModel.itemTitle?.count ?? 0 > 0 ? CGSize(width: kScreenWidth, height: kHeaderViewH) : CGSize.zero
     }
     

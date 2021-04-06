@@ -27,6 +27,10 @@
 		F71F34772619E4BF00F0AD19 /* XGNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F71F34742619E4BF00F0AD19 /* XGNavigationController.swift */; };
 		F71F34782619E4BF00F0AD19 /* XGBaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F71F34752619E4BF00F0AD19 /* XGBaseViewController.swift */; };
 		F71F347D2619E4DA00F0AD19 /* XGCommonModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F71F347C2619E4DA00F0AD19 /* XGCommonModel.swift */; };
+		F71F3497261AD93A00F0AD19 /* XGComicViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F71F3496261AD93A00F0AD19 /* XGComicViewController.swift */; };
+		F71F349F261AD95500F0AD19 /* XGDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F71F349E261AD95500F0AD19 /* XGDetailViewController.swift */; };
+		F71F34A4261AD99A00F0AD19 /* XGChapterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F71F34A3261AD99A00F0AD19 /* XGChapterViewController.swift */; };
+		F71F34A9261AD9DD00F0AD19 /* XGCommentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F71F34A8261AD9DD00F0AD19 /* XGCommentViewController.swift */; };
 		F73645392610873500B9FCCE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F73645382610873500B9FCCE /* AppDelegate.swift */; };
 		F73645422610873700B9FCCE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F73645412610873700B9FCCE /* Assets.xcassets */; };
 		F73645452610873700B9FCCE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F73645432610873700B9FCCE /* LaunchScreen.storyboard */; };
@@ -82,6 +86,10 @@
 		F71F34742619E4BF00F0AD19 /* XGNavigationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = XGNavigationController.swift; sourceTree = "<group>"; };
 		F71F34752619E4BF00F0AD19 /* XGBaseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = XGBaseViewController.swift; sourceTree = "<group>"; };
 		F71F347C2619E4DA00F0AD19 /* XGCommonModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XGCommonModel.swift; sourceTree = "<group>"; };
+		F71F3496261AD93A00F0AD19 /* XGComicViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XGComicViewController.swift; sourceTree = "<group>"; };
+		F71F349E261AD95500F0AD19 /* XGDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XGDetailViewController.swift; sourceTree = "<group>"; };
+		F71F34A3261AD99A00F0AD19 /* XGChapterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XGChapterViewController.swift; sourceTree = "<group>"; };
+		F71F34A8261AD9DD00F0AD19 /* XGCommentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XGCommentViewController.swift; sourceTree = "<group>"; };
 		F73645352610873500B9FCCE /* XiGuaManHua.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = XiGuaManHua.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F73645382610873500B9FCCE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F73645412610873700B9FCCE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -154,6 +162,7 @@
 			isa = PBXGroup;
 			children = (
 				F71F343526180D1800F0AD19 /* Mian */,
+				F71F3491261AD8D500F0AD19 /* Comic */,
 				F71F341F26180D1800F0AD19 /* Home */,
 				F71F342C26180D1800F0AD19 /* Category */,
 				F71F343226180D1800F0AD19 /* Book */,
@@ -294,11 +303,54 @@
 		F71F34722619E4BF00F0AD19 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				F71F34752619E4BF00F0AD19 /* XGBaseViewController.swift */,
 				F71F34732619E4BF00F0AD19 /* XGTabBarController.swift */,
 				F71F34742619E4BF00F0AD19 /* XGNavigationController.swift */,
-				F71F34752619E4BF00F0AD19 /* XGBaseViewController.swift */,
 			);
 			path = Controller;
+			sourceTree = "<group>";
+		};
+		F71F3491261AD8D500F0AD19 /* Comic */ = {
+			isa = PBXGroup;
+			children = (
+				F71F3492261AD90700F0AD19 /* Model */,
+				F71F3495261AD90700F0AD19 /* View */,
+				F71F3493261AD90700F0AD19 /* Controller */,
+				F71F3494261AD90700F0AD19 /* Request */,
+			);
+			path = Comic;
+			sourceTree = "<group>";
+		};
+		F71F3492261AD90700F0AD19 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		F71F3493261AD90700F0AD19 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				F71F3496261AD93A00F0AD19 /* XGComicViewController.swift */,
+				F71F349E261AD95500F0AD19 /* XGDetailViewController.swift */,
+				F71F34A3261AD99A00F0AD19 /* XGChapterViewController.swift */,
+				F71F34A8261AD9DD00F0AD19 /* XGCommentViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		F71F3494261AD90700F0AD19 /* Request */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Request;
+			sourceTree = "<group>";
+		};
+		F71F3495261AD90700F0AD19 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 		F736452C2610873500B9FCCE = {
@@ -652,13 +704,17 @@
 				F71F343B26180D1800F0AD19 /* XGVIPViewController.swift in Sources */,
 				F71F343C26180D1800F0AD19 /* XGRecommendViewController.swift in Sources */,
 				F73645D42611BBCF00B9FCCE /* XGCommon.swift in Sources */,
+				F71F34A4261AD99A00F0AD19 /* XGChapterViewController.swift in Sources */,
 				F71F343926180D1800F0AD19 /* XGHomeViewController.swift in Sources */,
+				F71F3497261AD93A00F0AD19 /* XGComicViewController.swift in Sources */,
 				F73645392610873500B9FCCE /* AppDelegate.swift in Sources */,
 				F73645DC2611DA8500B9FCCE /* XGSegmentedPageView.swift in Sources */,
 				F71F347D2619E4DA00F0AD19 /* XGCommonModel.swift in Sources */,
 				F71F34772619E4BF00F0AD19 /* XGNavigationController.swift in Sources */,
 				F71F34762619E4BF00F0AD19 /* XGTabBarController.swift in Sources */,
 				F71F343A26180D1800F0AD19 /* XGRankViewController.swift in Sources */,
+				F71F34A9261AD9DD00F0AD19 /* XGCommentViewController.swift in Sources */,
+				F71F349F261AD95500F0AD19 /* XGDetailViewController.swift in Sources */,
 				F73645B62610E28700B9FCCE /* UIColor-Extension.swift in Sources */,
 				F71F34582619554F00F0AD19 /* XGNetwork.swift in Sources */,
 				F71F343E26180D1800F0AD19 /* XGCollectionNormalCell.swift in Sources */,
