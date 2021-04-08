@@ -41,6 +41,7 @@
 		F73645CE2611BB8300B9FCCE /* XGSegmentedTitleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F73645CD2611BB8300B9FCCE /* XGSegmentedTitleView.swift */; };
 		F73645D42611BBCF00B9FCCE /* XGCommon.swift in Sources */ = {isa = PBXBuildFile; fileRef = F73645D32611BBCF00B9FCCE /* XGCommon.swift */; };
 		F73645DC2611DA8500B9FCCE /* XGSegmentedPageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F73645DB2611DA8500B9FCCE /* XGSegmentedPageView.swift */; };
+		F751E318261F39500065D2BC /* XGComicRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = F751E317261F39500065D2BC /* XGComicRequest.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -107,6 +108,7 @@
 		F73645CD2611BB8300B9FCCE /* XGSegmentedTitleView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = XGSegmentedTitleView.swift; sourceTree = "<group>"; };
 		F73645D32611BBCF00B9FCCE /* XGCommon.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XGCommon.swift; sourceTree = "<group>"; };
 		F73645DB2611DA8500B9FCCE /* XGSegmentedPageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XGSegmentedPageView.swift; sourceTree = "<group>"; };
+		F751E317261F39500065D2BC /* XGComicRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XGComicRequest.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -344,6 +346,7 @@
 		F71F3494261AD90700F0AD19 /* Request */ = {
 			isa = PBXGroup;
 			children = (
+				F751E317261F39500065D2BC /* XGComicRequest.swift */,
 			);
 			path = Request;
 			sourceTree = "<group>";
@@ -709,6 +712,7 @@
 				F71F34B4261C5A1200F0AD19 /* XGComicHeaderView.swift in Sources */,
 				F73645D42611BBCF00B9FCCE /* XGCommon.swift in Sources */,
 				F71F34A4261AD99A00F0AD19 /* XGChapterViewController.swift in Sources */,
+				F751E318261F39500065D2BC /* XGComicRequest.swift in Sources */,
 				F71F343926180D1800F0AD19 /* XGHomeViewController.swift in Sources */,
 				F71F3497261AD93A00F0AD19 /* XGComicViewController.swift in Sources */,
 				F73645392610873500B9FCCE /* AppDelegate.swift in Sources */,

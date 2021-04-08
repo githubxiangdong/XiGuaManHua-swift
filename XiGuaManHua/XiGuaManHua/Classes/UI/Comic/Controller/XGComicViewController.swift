@@ -11,6 +11,10 @@ private let kTitleViewHeight: CGFloat = 40
 private let kHeaderViewHeight: CGFloat = 150
 
 class XGComicViewController: XGBaseViewController {
+    // MARK:- 私有属性
+    private var comicId: Int = 0
+    
+    
     // MARK:- 懒加载属性
     private lazy var mainScrollView: UIScrollView = {[unowned self] in
         let scrollView = UIScrollView(frame: view.bounds)
@@ -19,9 +23,8 @@ class XGComicViewController: XGBaseViewController {
         return scrollView
     }()
     
-    private lazy var headerView: UIView = {
-        let header = UIView(frame: CGRect(x: 0, y: -kStatusAndNavigationBarH, width: kScreenWidth, height: kHeaderViewHeight + kStatusAndNavigationBarH))
-        header.backgroundColor = UIColor.lightGray
+    private lazy var headerView: XGComicHeaderView = {
+        let header = XGComicHeaderView(frame: CGRect(x: 0, y: -kStatusAndNavigationBarH, width: kScreenWidth, height: kHeaderViewHeight + kStatusAndNavigationBarH))
         return header
     }()
     
@@ -58,11 +61,22 @@ class XGComicViewController: XGBaseViewController {
         pageView.delegate = self
         return pageView
     }()
+
+    
+    // MARK:- 声明便利构造函数
+    convenience init(comicId: Int) {
+        self.init()
+        self.comicId = comicId
+    }
+    
     
     // MARK:- 系统函数
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = UIColor.background
+        
+        // 请求数据
+        loadData()
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -83,6 +97,16 @@ class XGComicViewController: XGBaseViewController {
     override func setupNavigationBar() {
         super.setupNavigationBar()
         navigationController?.barStyle(.clear)
+    }
+}
+
+
+// MARK:- 请求数据
+extension XGComicViewController {
+    private func loadData() {
+        XGComicRequest.requestComicData(comicId: comicId) { (response) in
+            
+        }
     }
 }
 

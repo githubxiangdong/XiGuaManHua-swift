@@ -115,7 +115,8 @@ extension XGRecommendViewController: UICollectionViewDataSource {
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        let comicController = XGComicViewController()
+        let comicModel = comicList[indexPath.section].comicArray[indexPath.item]
+        let comicController = XGComicViewController(comicId: comicModel.comicId)
         navigationController?.pushViewController(comicController, animated: true)
     }
 }
