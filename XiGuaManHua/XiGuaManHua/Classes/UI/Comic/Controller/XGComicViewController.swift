@@ -106,7 +106,7 @@ extension XGComicViewController: XGSegmentedPageViewDelegate {
 // MARK:- 遵守 UIScrollViewDelegate
 extension XGComicViewController: UIScrollViewDelegate {
     func scrollViewDidScroll(_ scrollView: UIScrollView) {
-        print(scrollView.contentOffset.y)
+        // TO DO 为啥-20
         if scrollView.contentOffset.y - 20 > kStatusAndNavigationBarH {
             navigationController?.barStyle(.theme)
         }else {

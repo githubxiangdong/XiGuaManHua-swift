@@ -31,6 +31,7 @@
 		F71F349F261AD95500F0AD19 /* XGDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F71F349E261AD95500F0AD19 /* XGDetailViewController.swift */; };
 		F71F34A4261AD99A00F0AD19 /* XGChapterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F71F34A3261AD99A00F0AD19 /* XGChapterViewController.swift */; };
 		F71F34A9261AD9DD00F0AD19 /* XGCommentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F71F34A8261AD9DD00F0AD19 /* XGCommentViewController.swift */; };
+		F71F34B4261C5A1200F0AD19 /* XGComicHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F71F34B3261C5A1200F0AD19 /* XGComicHeaderView.swift */; };
 		F73645392610873500B9FCCE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F73645382610873500B9FCCE /* AppDelegate.swift */; };
 		F73645422610873700B9FCCE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F73645412610873700B9FCCE /* Assets.xcassets */; };
 		F73645452610873700B9FCCE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F73645432610873700B9FCCE /* LaunchScreen.storyboard */; };
@@ -90,6 +91,7 @@
 		F71F349E261AD95500F0AD19 /* XGDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XGDetailViewController.swift; sourceTree = "<group>"; };
 		F71F34A3261AD99A00F0AD19 /* XGChapterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XGChapterViewController.swift; sourceTree = "<group>"; };
 		F71F34A8261AD9DD00F0AD19 /* XGCommentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XGCommentViewController.swift; sourceTree = "<group>"; };
+		F71F34B3261C5A1200F0AD19 /* XGComicHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XGComicHeaderView.swift; sourceTree = "<group>"; };
 		F73645352610873500B9FCCE /* XiGuaManHua.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = XiGuaManHua.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F73645382610873500B9FCCE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F73645412610873700B9FCCE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -349,6 +351,7 @@
 		F71F3495261AD90700F0AD19 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				F71F34B3261C5A1200F0AD19 /* XGComicHeaderView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -703,6 +706,7 @@
 				F71F344226180D1800F0AD19 /* XGMineViewController.swift in Sources */,
 				F71F343B26180D1800F0AD19 /* XGVIPViewController.swift in Sources */,
 				F71F343C26180D1800F0AD19 /* XGRecommendViewController.swift in Sources */,
+				F71F34B4261C5A1200F0AD19 /* XGComicHeaderView.swift in Sources */,
 				F73645D42611BBCF00B9FCCE /* XGCommon.swift in Sources */,
 				F71F34A4261AD99A00F0AD19 /* XGChapterViewController.swift in Sources */,
 				F71F343926180D1800F0AD19 /* XGHomeViewController.swift in Sources */,
